@@ -11,31 +11,29 @@ import (
 
 var flags = pflag.NewFlagSet("flags", pflag.ExitOnError)
 
+// init инициализирует конфигурацию приложения
 func init() {
-	// Start a logger
-	logFile, err := os.OpenFile("app.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
+	// запускаем логирование в файл
+	logFile, err := os.OpenFile("app.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0o666)
 	if err != nil {
 		log.Fatalln("Failed to open log file:", err)
 	}
+	// устанавливаем logFile как стандартный вывод
 	log.SetOutput(logFile)
 
-	// Define the flags and bind them to viper
+	// подключем флаги
 	flags.StringP("ServerAddress", "a", ":8080", "HTTP server network address")
 
-	// Parse the command-line flags
 	err = flags.Parse(os.Args[1:])
 	if err != nil {
 		log.Printf("Error parsing flags: %v", err)
 	}
 
-	// Bind the flags to viper
 	bindFlagToViper("ServerAddress")
 
-	// Set the environment variable names
 	viper.SetEnvKeyReplacer(strings.NewReplacer(".", "_"))
 	bindEnvToViper("ServerAddress", "TODO_PORT")
 
-	// Read the environment variables
 	viper.AutomaticEnv()
 }
 
@@ -51,6 +49,7 @@ func bindEnvToViper(viperKey, envKey string) {
 	}
 }
 
+// Address возвращает адрес сервера, в нашем случае порт!
 func Address() string {
 	return viper.GetString("ServerAddress")
 }

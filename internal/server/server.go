@@ -15,11 +15,13 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// Server структура, которая содержит адрес сервера и его обработчик
 type Server struct {
 	Address string
 	Handler *gin.Engine
 }
 
+// New функция, которая создает новый экземпляр структуры Server
 func New() *Server {
 	addr := config.Address()
 
@@ -40,6 +42,7 @@ func New() *Server {
 	}
 }
 
+// NewServer функция, которая создает новый экземпляр http.Server
 func (s *Server) NewServer() *http.Server {
 	return &http.Server{
 		Addr:    s.Address,
@@ -47,6 +50,7 @@ func (s *Server) NewServer() *http.Server {
 	}
 }
 
+// Run метод, который запускает сервер
 func (s *Server) Run() error {
 	srv := s.NewServer()
 	log.Printf("Server is starting on %s\n", s.Address)

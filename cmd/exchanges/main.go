@@ -5,5 +5,6 @@ import (
 )
 
 func main() {
+	// Run запускаем сервер
 	server.New().Run()
 }
