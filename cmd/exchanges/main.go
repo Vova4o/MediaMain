@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/Vova4o/Go-REST-API/internal/server"
+	"github.com/Vova4o/MediaMain/internal/server"
 )
 
 func main() {

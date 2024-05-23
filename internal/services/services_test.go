@@ -6,7 +6,7 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/Vova4o/Go-REST-API/internal/models"
+	"github.com/Vova4o/MediaMain/internal/models"
 )
 
 func TestServices_SplitMoney(t *testing.T) {

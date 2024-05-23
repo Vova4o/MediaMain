@@ -1,4 +1,4 @@
-module github.com/Vova4o/Go-REST-API
+module github.com/Vova4o/MediaMain
 
 go 1.21.0
 

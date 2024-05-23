@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/Vova4o/Go-REST-API/internal/models"
+	"github.com/Vova4o/MediaMain/internal/models"
 	"github.com/gin-gonic/gin"
 )
 

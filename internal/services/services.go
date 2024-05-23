@@ -4,7 +4,7 @@ import (
 	"errors"
 	"log"
 
-	"github.com/Vova4o/Go-REST-API/internal/models"
+	"github.com/Vova4o/MediaMain/internal/models"
 )
 
 // Services структура, которая содержит методы для работы с бизнес-логикой

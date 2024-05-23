@@ -9,9 +9,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/Vova4o/Go-REST-API/internal/config"
-	"github.com/Vova4o/Go-REST-API/internal/handlers"
-	"github.com/Vova4o/Go-REST-API/internal/services"
+	"github.com/Vova4o/MediaMain/internal/config"
+	"github.com/Vova4o/MediaMain/internal/handlers"
+	"github.com/Vova4o/MediaMain/internal/services"
 	"github.com/gin-gonic/gin"
 )
 
