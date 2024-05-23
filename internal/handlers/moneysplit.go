@@ -67,5 +67,5 @@ func (h *Handler) Split(c *gin.Context) {
 		return
 	}
 
-	c.JSON(http.StatusOK, gin.H{"banknotes": banknotes})
+	c.JSON(http.StatusOK, gin.H{"exchanges": banknotes})
 }
