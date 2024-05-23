@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/sirupsen/logrus"
+	"github.com/Vova4o/Go-REST-API/internal/server"
 )
 
 func main() {
-	logrus.Info("hello world!")
+	server.New().Run()
 }
