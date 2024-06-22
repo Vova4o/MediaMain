@@ -1,4 +1,4 @@
-# golang junior dev
+# Тестовое задание для компнии MediaMain
 
 1. Добавлен HTTP server
 2. Добавлен обработчик запроса по ручке /split
